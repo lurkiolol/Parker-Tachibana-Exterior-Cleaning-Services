@@ -476,9 +476,127 @@
     }
 
     /* ── RESPONSIVE ── */
+
+    /* Tablet (max 768px) */
+    @media (max-width: 768px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-title {
+        font-size: clamp(2.2rem, 8vw, 3.2rem);
+      }
+
+      .hero-sub {
+        font-size: 1rem;
+      }
+
+      .contact-card {
+        padding: 2.2rem 2rem;
+      }
+    }
+
+    /* Mobile (max 560px) */
     @media (max-width: 560px) {
-      nav { padding: 0 1.2rem; }
-      .nav-logo-text { font-size: 0.88rem; }
-      .contact-card { padding: 2rem 1.5rem; }
-      .btn-contact span { display: none; }
+      /* Navbar */
+      nav {
+        padding: 0 1rem;
+        height: 60px;
+      }
+
+      .nav-logo-text {
+        font-size: 0.88rem;
+      }
+
+      .nav-logo-text span {
+        display: none;
+      }
+
+      /* Hide "Contact Us", show only "Request Cleaning" in nav */
+      .btn-contact {
+        display: none;
+      }
+
+      .btn-request {
+        padding: 8px 16px;
+        font-size: 0.82rem;
+      }
+
+      /* Hero */
+      .hero {
+        padding: 3rem 1.4rem 4rem;
+        min-height: calc(100vh - 60px);
+      }
+
+      .hero-badge {
+        font-size: 0.72rem;
+        padding: 5px 12px;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        gap: 10px;
+      }
+
+      .btn-hero-primary,
+      .btn-hero-secondary {
+        width: 100%;
+        text-align: center;
+        padding: 14px 20px;
+      }
+
+      /* Services */
+      .services {
+        padding: 2rem 1.2rem 3rem;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+
+      .service-card {
+        padding: 1.2rem 1rem;
+      }
+
+      .service-icon {
+        font-size: 1.6rem;
+      }
+
+      /* Contact */
+      .contact-section {
+        padding: 2.5rem 1.2rem 4rem;
+      }
+
+      .contact-card {
+        padding: 1.8rem 1.4rem;
+        border-radius: 20px;
+      }
+
+      .contact-title {
+        font-size: 1.35rem;
+      }
+
+      .contact-detail-value {
+        font-size: 0.88rem;
+      }
+
+      /* Footer */
+      footer {
+        font-size: 0.72rem;
+        padding: 1.2rem 1rem;
+      }
+    }
+
+    /* Very small screens (max 360px) */
+    @media (max-width: 360px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-title {
+        font-size: 2rem;
+      }
     }
